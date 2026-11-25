@@ -7,7 +7,7 @@ from urllib.parse import urlparse
 
 from .build import PR_TEXT
 
-ALLOWED_LINK_HOSTS = {"hb.afl.rakuten.co.jp", "item.rakuten.co.jp", "www.rakuten.co.jp", "developers.rakuten.com"}
+ALLOWED_LINK_HOSTS = {"hb.afl.rakuten.co.jp", "item.rakuten.co.jp", "www.rakuten.co.jp", "developers.rakuten.com", "webservice.rakuten.co.jp"}
 BAD_STRINGS = ["None円", "undefined", "NaN円", "Traceback"]
 
 

@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 PR_TEXT = "【PR】当サイトは楽天アフィリエイトを利用しています。リンク先で購入されると、運営者に報酬が支払われることがあります。ランキングの順位は報酬の有無や料率では決めていません。"
-CREDIT_HTML = '<a href="https://developers.rakuten.com/" target="_blank" rel="noopener">Supported by Rakuten Developers</a>'
+CREDIT_HTML = '<a href="https://webservice.rakuten.co.jp/" target="_blank" rel="noopener">Supported by Rakuten Developers</a>'
 TYPE_LABEL = {"musenmai": "無洗米", "genmai": "玄米", "selectable": "精米を選べる"}
 
 
