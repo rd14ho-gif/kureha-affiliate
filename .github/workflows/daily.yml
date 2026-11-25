@@ -1,0 +1,88 @@
+name: 毎日の自動更新
+
+on:
+  schedule:
+    - cron: "17 20 * * *"   # 毎日 05:17（日本時間）
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "data/**"
+      - "**.md"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily-update
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      mode: ${{ steps.mode.outputs.mode }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: テスト
+        run: python -m unittest discover -s tests -t .
+
+      - name: モード判定（APIキーがなければデモで動作確認だけ）
+        id: mode
+        env:
+          APP_ID: ${{ secrets.RAKUTEN_APP_ID }}
+          ACCESS_KEY: ${{ secrets.RAKUTEN_ACCESS_KEY }}
+        run: |
+          if [ -n "$APP_ID" ] && [ -n "$ACCESS_KEY" ]; then echo "mode=live" >> "$GITHUB_OUTPUT"; else echo "mode=demo" >> "$GITHUB_OUTPUT"; fi
+
+      - name: 取得・計算・サイト生成・チェック
+        env:
+          RAKUTEN_APP_ID: ${{ secrets.RAKUTEN_APP_ID }}
+          RAKUTEN_ACCESS_KEY: ${{ secrets.RAKUTEN_ACCESS_KEY }}
+          RAKUTEN_AFFILIATE_ID: ${{ secrets.RAKUTEN_AFFILIATE_ID }}
+          SITE_URL: ${{ vars.SITE_URL || 'https://rd14ho-gif.github.io/kureha-affiliate' }}
+        run: |
+          if [ "${{ steps.mode.outputs.mode }}" = "live" ]; then
+            python -m pipeline.run --out dist
+          else
+            python -m pipeline.run --demo --out dist
+          fi
+
+      - name: 相場の記録を保存（集計値のみ）
+        if: steps.mode.outputs.mode == 'live'
+        run: |
+          git config user.name "kureha-bot"
+          git config user.email "kureha-bot@users.noreply.github.com"
+          git add data/history data/last_run.json
+          git diff --cached --quiet || (git commit -m "相場の記録を更新 $(date -u +%F)" && git push)
+
+      - name: プレビュー用に保存（Actionsの画面からダウンロードできる）
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-preview-${{ steps.mode.outputs.mode }}
+          path: dist
+          retention-days: 7
+
+      - name: 公開用に保存
+        if: steps.mode.outputs.mode == 'live' && vars.PUBLISH_ENABLED == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    if: needs.build.outputs.mode == 'live' && vars.PUBLISH_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

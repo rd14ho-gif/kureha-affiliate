@@ -1,0 +1,14 @@
+{
+  "site_name": "お米1kg最安ナビ",
+  "tagline": "楽天市場のお米を「送料込み・ポイント込みの1kgあたり実質価格」で毎日ランキング",
+  "base_url": "https://rd14ho-gif.github.io/kureha-affiliate",
+  "operator": "MirAI",
+  "lang": "ja",
+  "ga4_measurement_id": "",
+  "search_console_verification": "",
+  "ranking_size": 100,
+  "min_items_required": 30,
+  "price_per_kg_sane_range": [150, 3000],
+  "max_daily_median_change": 0.4,
+  "history_days": 400
+}

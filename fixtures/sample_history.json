@@ -1,0 +1,314 @@
+[
+ {
+  "date": "2026-11-01",
+  "count": 300,
+  "median": 636,
+  "p25": 576,
+  "p75": 706,
+  "min": 456,
+  "by_type": {
+   "hakumai": 636,
+   "musenmai": 666,
+   "genmai": 596
+  }
+ },
+ {
+  "date": "2026-11-02",
+  "count": 301,
+  "median": 643,
+  "p25": 583,
+  "p75": 713,
+  "min": 463,
+  "by_type": {
+   "hakumai": 643,
+   "musenmai": 673,
+   "genmai": 603
+  }
+ },
+ {
+  "date": "2026-11-03",
+  "count": 302,
+  "median": 635,
+  "p25": 575,
+  "p75": 705,
+  "min": 455,
+  "by_type": {
+   "hakumai": 635,
+   "musenmai": 665,
+   "genmai": 595
+  }
+ },
+ {
+  "date": "2026-11-04",
+  "count": 303,
+  "median": 624,
+  "p25": 564,
+  "p75": 694,
+  "min": 444,
+  "by_type": {
+   "hakumai": 624,
+   "musenmai": 654,
+   "genmai": 584
+  }
+ },
+ {
+  "date": "2026-11-05",
+  "count": 304,
+  "median": 628,
+  "p25": 568,
+  "p75": 698,
+  "min": 448,
+  "by_type": {
+   "hakumai": 628,
+   "musenmai": 658,
+   "genmai": 588
+  }
+ },
+ {
+  "date": "2026-11-06",
+  "count": 305,
+  "median": 638,
+  "p25": 578,
+  "p75": 708,
+  "min": 458,
+  "by_type": {
+   "hakumai": 638,
+   "musenmai": 668,
+   "genmai": 598
+  }
+ },
+ {
+  "date": "2026-11-07",
+  "count": 306,
+  "median": 633,
+  "p25": 573,
+  "p75": 703,
+  "min": 453,
+  "by_type": {
+   "hakumai": 633,
+   "musenmai": 663,
+   "genmai": 593
+  }
+ },
+ {
+  "date": "2026-11-08",
+  "count": 307,
+  "median": 624,
+  "p25": 564,
+  "p75": 694,
+  "min": 444,
+  "by_type": {
+   "hakumai": 624,
+   "musenmai": 654,
+   "genmai": 584
+  }
+ },
+ {
+  "date": "2026-11-09",
+  "count": 308,
+  "median": 617,
+  "p25": 557,
+  "p75": 687,
+  "min": 437,
+  "by_type": {
+   "hakumai": 617,
+   "musenmai": 647,
+   "genmai": 577
+  }
+ },
+ {
+  "date": "2026-11-10",
+  "count": 309,
+  "median": 613,
+  "p25": 553,
+  "p75": 683,
+  "min": 433,
+  "by_type": {
+   "hakumai": 613,
+   "musenmai": 643,
+   "genmai": 573
+  }
+ },
+ {
+  "date": "2026-11-11",
+  "count": 310,
+  "median": 602,
+  "p25": 542,
+  "p75": 672,
+  "min": 422,
+  "by_type": {
+   "hakumai": 602,
+   "musenmai": 632,
+   "genmai": 562
+  }
+ },
+ {
+  "date": "2026-11-12",
+  "count": 311,
+  "median": 595,
+  "p25": 535,
+  "p75": 665,
+  "min": 415,
+  "by_type": {
+   "hakumai": 595,
+   "musenmai": 625,
+   "genmai": 555
+  }
+ },
+ {
+  "date": "2026-11-13",
+  "count": 312,
+  "median": 589,
+  "p25": 529,
+  "p75": 659,
+  "min": 409,
+  "by_type": {
+   "hakumai": 589,
+   "musenmai": 619,
+   "genmai": 549
+  }
+ },
+ {
+  "date": "2026-11-14",
+  "count": 313,
+  "median": 586,
+  "p25": 526,
+  "p75": 656,
+  "min": 406,
+  "by_type": {
+   "hakumai": 586,
+   "musenmai": 616,
+   "genmai": 546
+  }
+ },
+ {
+  "date": "2026-11-15",
+  "count": 314,
+  "median": 594,
+  "p25": 534,
+  "p75": 664,
+  "min": 414,
+  "by_type": {
+   "hakumai": 594,
+   "musenmai": 624,
+   "genmai": 554
+  }
+ },
+ {
+  "date": "2026-11-16",
+  "count": 315,
+  "median": 591,
+  "p25": 531,
+  "p75": 661,
+  "min": 411,
+  "by_type": {
+   "hakumai": 591,
+   "musenmai": 621,
+   "genmai": 551
+  }
+ },
+ {
+  "date": "2026-11-17",
+  "count": 316,
+  "median": 595,
+  "p25": 535,
+  "p75": 665,
+  "min": 415,
+  "by_type": {
+   "hakumai": 595,
+   "musenmai": 625,
+   "genmai": 555
+  }
+ },
+ {
+  "date": "2026-11-18",
+  "count": 317,
+  "median": 589,
+  "p25": 529,
+  "p75": 659,
+  "min": 409,
+  "by_type": {
+   "hakumai": 589,
+   "musenmai": 619,
+   "genmai": 549
+  }
+ },
+ {
+  "date": "2026-11-19",
+  "count": 318,
+  "median": 586,
+  "p25": 526,
+  "p75": 656,
+  "min": 406,
+  "by_type": {
+   "hakumai": 586,
+   "musenmai": 616,
+   "genmai": 546
+  }
+ },
+ {
+  "date": "2026-11-20",
+  "count": 319,
+  "median": 588,
+  "p25": 528,
+  "p75": 658,
+  "min": 408,
+  "by_type": {
+   "hakumai": 588,
+   "musenmai": 618,
+   "genmai": 548
+  }
+ },
+ {
+  "date": "2026-11-21",
+  "count": 320,
+  "median": 592,
+  "p25": 532,
+  "p75": 662,
+  "min": 412,
+  "by_type": {
+   "hakumai": 592,
+   "musenmai": 622,
+   "genmai": 552
+  }
+ },
+ {
+  "date": "2026-11-22",
+  "count": 321,
+  "median": 601,
+  "p25": 541,
+  "p75": 671,
+  "min": 421,
+  "by_type": {
+   "hakumai": 601,
+   "musenmai": 631,
+   "genmai": 561
+  }
+ },
+ {
+  "date": "2026-11-23",
+  "count": 322,
+  "median": 594,
+  "p25": 534,
+  "p75": 664,
+  "min": 414,
+  "by_type": {
+   "hakumai": 594,
+   "musenmai": 624,
+   "genmai": 554
+  }
+ },
+ {
+  "date": "2026-11-24",
+  "count": 323,
+  "median": 590,
+  "p25": 530,
+  "p75": 660,
+  "min": 410,
+  "by_type": {
+   "hakumai": 590,
+   "musenmai": 620,
+   "genmai": 550
+  }
+ }
+]
